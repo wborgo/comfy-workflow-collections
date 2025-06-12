@@ -2,12 +2,13 @@
 
 ![Generated Video Preview](./assets/preview.gif)
 
-![ComfyUI Workflow Preview](./assets/comfyUI.png)
-
 
 This workflow uses a model derived from Wan2.1 with the **Self Forcing** technique, integrated into the video generation pipeline **VACE (Video Autoencoding via Composition and Editing)**.
 
 The main focus here is performance: generating short videos with high visual quality, even on modest local setups.
+
+![ComfyUI Workflow Preview](./assets/comfyUI.png)
+
 
 ---
 
