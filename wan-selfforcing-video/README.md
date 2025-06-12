@@ -2,7 +2,7 @@
 
 ![ComfyUI Workflow Preview](./assets/comfyUI.png)
 
-![Generated Video Preview](./assets/preview.png)
+![Generated Video Preview](./assets/preview.gif)
 
 This workflow uses a model derived from Wan2.1 with the **Self Forcing** technique, integrated into the video generation pipeline **VACE (Video Autoencoding via Composition and Editing)**.
 
