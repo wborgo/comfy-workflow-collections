@@ -6,34 +6,26 @@ O foco aqui é performance: geração de vídeos curtos com alta qualidade visua
 
 ---
 
-## ⚙️ Requisitos
-
-- **GPU**: RTX 3060 (mínimo 12GB VRAM)
-- **RAM**: 16GB
-- [ComfyUI instalado](https://github.com/comfyanonymous/ComfyUI)
-- Modelos necessários:
-  - `wan-sf-1.3b` (modelo Self Forcing)
-  - Depth detector (Canny / OpenPose / Midas, etc.)
-  - Background remover (ex: MODNet)
-  - Modelo LoRA (opcional)
-
----
 
 ## ▶️ Como usar
 
-1. Carregue o `workflow.json` no ComfyUI.
-2. Insira:
+1. Baixe o workflow (.json)
+2. Carregue o workflow no ComfyUI.
+3. Insira:
    - Um **vídeo de referência** (animação/movimento)
    - Uma **imagem de referência** (personagem, rosto, etc.)
-3. (Opcional) Aplique LoRAs para adicionar estilo artístico.
-4. Execute o pipeline.
+   - Prompt Positivo
+4. (Opcional) Aplique LoRAs para adicionar estilo artístico.
+5. Execute o pipeline.
+
+Importante: O KSample utiliza LCM, logo, o prompt negativo deve ser mantido em branco
 
 ---
 
 ## 📌 Detalhes técnicos
 
-- Resolução atual: **480p**
-- Duração: até **5 segundos**
+- Resolução atual: **480p** (exemplo: 832x480)
+- Duração: aproximadamente **5 segundos**
 - Frame rate: **16fps**
 - Tempo médio de geração: **~2 minutos** em hardware modesto
 
@@ -42,13 +34,9 @@ O foco aqui é performance: geração de vídeos curtos com alta qualidade visua
 ## 🎨 Personalização
 
 - Altere o método de Depth Map conforme sua preferência.
-- Troque a imagem de referência para diferentes personagens.
+- Troque a imagem de referência para diferentes personagens
 - Aplique LoRAs para adicionar estilo ou identidade visual ao vídeo.
 
----
+Caso a imagem de referência não esteja sendo levada em consideração, provavelmente o modelo não removeu seu fundo corretamente, tente com uma imagem sem fundo originalmente (canal alpha transparente, salvo como .png)
 
-## 🧪 Resultado
 
-*Adicione aqui uma imagem ou link para um exemplo gerado, se quiser mostrar o impacto visual do pipeline.*
-
----
