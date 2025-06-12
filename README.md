@@ -8,10 +8,8 @@ Os fluxos aqui combinam modelos de última geração, técnicas modernas (como *
 
 ## 🚀 Workflows disponíveis
 
-Self Forcing + VACE
-
+Self Forcing + VACE:
 [wan-selfforcing-video](./wan-selfforcing-video)
-
 Geração rápida de vídeos usando modelo leve (Wan2.1 1.3B Self Forcing) com opções de LoRA, depth map e image reference
 
 ---
