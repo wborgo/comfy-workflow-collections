@@ -1,46 +1,43 @@
 # Workflow: Wan Self Forcing + VACE
 
-![Preview do Workflow no ComfyUI](./assets/comfyUI.png)
+![ComfyUI Workflow Preview](./assets/comfyUI.png)
 
-<video controls width="100%">
-  <source src="./assets/SelfForcing_00222.mp4" type="video/mp4">
-  Seu navegador não suporta vídeo incorporado.
-</video>
+![Generated Video Preview](./assets/preview.png)
 
-Este workflow usa o modelo derivado do Wan2.1 com a técnica **Self Forcing**, integrado ao pipeline de geração de vídeo **VACE (Video Autoencoding via Composition and Editing)**.
+This workflow uses a model derived from Wan2.1 with the **Self Forcing** technique, integrated into the video generation pipeline **VACE (Video Autoencoding via Composition and Editing)**.
 
-O foco aqui é performance: geração de vídeos curtos com alta qualidade visual, mesmo em setups locais modestos.
+The main focus here is performance: generating short videos with high visual quality, even on modest local setups.
 
 ---
 
-## ▶️ Como usar
+## ▶️ How to Use
 
-1. Baixe o workflow (.json)
-2. Carregue o workflow no ComfyUI.
-3. Insira:
-   - Um **vídeo de referência** (animação/movimento)
-   - Uma **imagem de referência** (personagem, rosto, etc.)
-   - Prompt Positivo
-4. (Opcional) Aplique LoRAs para adicionar estilo artístico.
-5. Execute o pipeline.
+1. Download the workflow (.json)
+2. Load the workflow into ComfyUI.
+3. Provide:
+   - A **reference video** (motion/animation)
+   - A **reference image** (character, face, etc.)
+   - Positive Prompt
+4. (Optional) Apply LoRAs to add artistic style.
+5. Run the pipeline.
 
-> ⚠️ Importante: O KSampler utiliza LCM, então o **prompt negativo deve ser deixado em branco**.
+> ⚠️ Important: The KSampler uses LCM, so the **negative prompt must be left blank**.
 
 ---
 
-## 📌 Detalhes técnicos
+## 📌 Technical Details
 
-- Resolução atual: **480p** (exemplo: 832x480)
-- Duração: aproximadamente **5 segundos**
+- Current resolution: **480p** (e.g., 832x480)
+- Duration: approximately **5 seconds**
 - Frame rate: **16fps**
-- Tempo médio de geração: **~2 minutos** em hardware modesto
+- Average generation time: **~2 minutes** on modest hardware
 
 ---
 
-## 🎨 Personalização
+## 🎨 Customization
 
-- Altere o método de Depth Map conforme sua preferência.
-- Troque a imagem de referência para diferentes personagens.
-- Aplique LoRAs para adicionar estilo ou identidade visual ao vídeo.
+- Change the Depth Map method as desired.
+- Swap the reference image for different characters.
+- Apply LoRAs to add artistic style or unique visual identity to the video.
 
-> 💡 Caso a imagem de referência não esteja sendo levada em consideração, provavelmente o modelo não removeu seu fundo corretamente. Tente com uma imagem sem fundo (canal alpha transparente, salva como `.png`).
+> 💡 If the reference image doesn't seem to influence the result, it's likely the background wasn't removed properly. Try using a transparent-background image (alpha channel, saved as `.png`).
